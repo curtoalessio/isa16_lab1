@@ -1,0 +1,87 @@
+*----------------------------------------------------------------------------------------
+*	Innovus 17.11-s080_1 (64bit) 08/04/2017 11:13 (Linux 2.6.18-194.el5)
+*	
+*
+* 	Date & Time:	2020-Nov-14 17:04:24 (2020-Nov-14 16:04:24 GMT)
+*
+*----------------------------------------------------------------------------------------
+*
+*	Design: IIR_FILTER_ADV
+*
+*	Liberty Libraries used: 
+*	        MyAnView: /home/isa16/lab1/advanced_architecture/innovus/IIR_FILTER_ADV.enc.dat/libs/mmmc/NangateOpenCellLibrary_typical_ecsm_nowlm.lib
+*
+*	Power Domain used: 
+*		Rail:        VDD 	Voltage:        1.1 
+*
+*       Power View : MyAnView
+*
+*       User-Defined Activity : N.A.
+*
+*	Switching Activity File used: 
+*	        ../vcd/IIR_FILTER_ADV_INN.vcd
+*			Vcd Window used(Start Time, Stop Time):(-2.53476, -2.53476) 
+*                     Vcd Scale Factor: 1 
+**                    Design annotation coverage: 2591/2591 = 100% 
+*
+*       Hierarchical Global Activity: N.A.
+*
+*       Global Activity: N.A.
+*
+*       Sequential Element Activity: N.A.
+*
+*       Primary Input Activity: 0.200000
+*
+*       Default icg ratio: N.A.
+*
+*       Global Comb ClockGate Ratio: N.A.
+*
+*	Power Units = 1mW
+*
+*	Time Units = 1e-09 secs 
+*
+*       report_power -outfile ../power_report_IIR_FILTER_ADV_INNOVUS.txt -sort total
+*
+-----------------------------------------------------------------------------------------
+
+
+Total Power 
+-----------------------------------------------------------------------------------------
+Total Internal Power:        0.72665362 	   56.1841%
+Total Switching Power:       0.48400320 	   37.4226%
+Total Leakage Power:         0.08268778 	    6.3933%
+Total Power:                 1.29334460 
+-----------------------------------------------------------------------------------------
+
+
+Group                           Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+Sequential                        0.1231     0.02537     0.01347      0.1619       12.52 
+Macro                                  0           0           0           0           0 
+IO                                     0           0           0           0           0 
+Combinational                     0.6036      0.4586     0.06921       1.131       87.48 
+Clock (Combinational)                  0           0           0           0           0 
+Clock (Sequential)                     0           0           0           0           0 
+-----------------------------------------------------------------------------------------
+Total                             0.7267       0.484     0.08269       1.293         100 
+-----------------------------------------------------------------------------------------
+
+
+Rail                  Voltage   Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+VDD                       1.1     0.7267       0.484     0.08269       1.293         100 
+
+
+-----------------------------------------------------------------------------------------
+*	Power Distribution Summary: 
+* 		Highest Average Power:       fb_mult0_mult_17_U5 (FA_X1): 	  0.005162 
+* 		Highest Leakage Power:       a1_a2_reg_q_reg_10_ (DFFR_X1): 	 9.116e-05 
+* 		Total Cap: 	1.25203e-11 F
+* 		Total instances in design:  2008
+* 		Total instances in design with no power:     0
+*          Total instances in design with no activity:     0
+* 		Total Fillers and Decap:     0
+-----------------------------------------------------------------------------------------
+

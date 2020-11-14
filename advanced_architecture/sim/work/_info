@@ -3,9 +3,9 @@ m255
 cModel Technology
 d/home/isa16/lab1/advanced_architecture/sim
 T_opt
-V;g<DjOMh40Rn6GY>CXfdV0
+VARojl:Kb=`EmlV62]6C?Y0
 06 10 4 ./work tb_iir_adv fast 0
-o-quiet -auto_acc_if_foreign -work work -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /tb_iir_adv/UUT=../netlist/IIR_FILTER_ADV.sdf -suppress 1948
+o-quiet -auto_acc_if_foreign -work work -L /software/dk/nangate45/verilog/msim6.2g -sdftyp /tb_iir_adv/UUT=../innovus/IIR_FILTER_ADV.sdf -suppress 1948
 tExplicit 1
 OE;O;6.2g;35
 Eclk_gen
@@ -96,12 +96,12 @@ M1 std textio
 o-93 -work ./work
 tExplicit 1
 vIIR_FILTER_ADV
-INI=VW@W4<4Fe`O7dW<o_^3
+ICkQI=fKl_Ufco4HkdR1<?2
 VjiBg0GSPXU_bR;CEVf=5i3
-w1605360061
-8../netlist/IIR_FILTER_ADV.v
-F../netlist/IIR_FILTER_ADV.v
-L0 8
+w1605365590
+8../innovus/IIR_FILTER_ADV.v
+F../innovus/IIR_FILTER_ADV.v
+L0 15
 VjiBg0GSPXU_bR;CEVf=5i3
 OE;L;6.2g;35
 r1

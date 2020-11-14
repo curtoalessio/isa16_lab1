@@ -1,6 +1,6 @@
 ## CUSTOMIZE
 
-set IN_DIR "/home/isa16/lab1/advanced_architecture/syn/netlist"
+set IN_DIR "/home/isa16/lab1/advanced_architecture/netlist"
 set TopLevelDesign "IIR_FILTER_ADV"
 set in_verilog_filename "${IN_DIR}/${TopLevelDesign}.v"
 set in_sdc_filename "${IN_DIR}/${TopLevelDesign}.sdc"

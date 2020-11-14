@@ -1,0 +1,21 @@
+#----------------------------------------------------------
+# IIR_FILTER_ADV/.snaprc_ : snapshot resource file                          
+# label =                                       
+#----------------------------------------------------------
+set tmpstr ""
+set tmpbar ""
+lappend tmpstr "dir" $sdir
+lappend tmpstr "label" 
+lappend tmpstr "fplan" $sdir/ss_.fplan.gif
+lappend tmpstr "amoeba" $sdir/ss_.amoeba.gif
+lappend tmpstr "place" $sdir/ss_.place.gif
+lappend tmpstr "trgGlbOverflowPctH" 0
+lappend tmpstr "trgGlbOverflowPctV" 0
+lappend tmpbar "Congestion"
+lappend tmpstr "Congestion" 0
+lappend tmpbar WNS
+lappend tmpstr WNS 3.319
+lappend tmpbar TNS
+lappend tmpstr TNS 0.0
+lappend tmpbar Overlap
+lappend tmpstr Overlap 0
