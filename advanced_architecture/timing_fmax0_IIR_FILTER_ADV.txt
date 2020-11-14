@@ -1,0 +1,81 @@
+Information: Updating design information... (UID-85)
+Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : IIR_FILTER_ADV
+Version: O-2018.06-SP4
+Date   : Sat Nov 14 11:54:21 2020
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: w_reg/q_reg[2]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: y_reg/q_reg[8]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  IIR_FILTER_ADV     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  w_reg/q_reg[2]/CK (DFFR_X1)                             0.00       0.00 r
+  w_reg/q_reg[2]/QN (DFFR_X1)                             0.07       0.07 r
+  w_reg/U7/ZN (INV_X2)                                    0.04       0.11 f
+  w_reg/q[2] (REG_N11_1)                                  0.00       0.11 f
+  y_mult/fact1[2] (MULTIPLIER_N11_0)                      0.00       0.11 f
+  y_mult/mult_17/a[2] (MULTIPLIER_N11_0_DW_mult_tc_1)     0.00       0.11 f
+  y_mult/mult_17/U821/ZN (XNOR2_X1)                       0.07       0.18 f
+  y_mult/mult_17/U457/Z (CLKBUF_X3)                       0.07       0.25 f
+  y_mult/mult_17/U731/ZN (OAI22_X1)                       0.08       0.33 r
+  y_mult/mult_17/U194/S (FA_X1)                           0.13       0.46 f
+  y_mult/mult_17/U193/S (FA_X1)                           0.14       0.60 r
+  y_mult/mult_17/U192/S (FA_X1)                           0.12       0.72 f
+  y_mult/mult_17/U561/ZN (NOR2_X1)                        0.05       0.77 r
+  y_mult/mult_17/U717/ZN (OAI21_X1)                       0.04       0.81 f
+  y_mult/mult_17/U809/ZN (AOI21_X1)                       0.05       0.86 r
+  y_mult/mult_17/U503/ZN (OAI21_X1)                       0.04       0.90 f
+  y_mult/mult_17/U857/ZN (AOI21_X1)                       0.04       0.95 r
+  y_mult/mult_17/U522/ZN (XNOR2_X1)                       0.07       1.02 r
+  y_mult/mult_17/product[19] (MULTIPLIER_N11_0_DW_mult_tc_1)
+                                                          0.00       1.02 r
+  y_mult/fract_product[19] (MULTIPLIER_N11_0)             0.00       1.02 r
+  y_add/add1[7] (ADDER_N9_0)                              0.00       1.02 r
+  y_add/add_16/A[7] (ADDER_N9_0_DW01_add_2)               0.00       1.02 r
+  y_add/add_16/U139/ZN (NOR2_X1)                          0.03       1.05 f
+  y_add/add_16/U122/ZN (NOR2_X1)                          0.05       1.10 r
+  y_add/add_16/U118/ZN (NAND2_X1)                         0.03       1.13 f
+  y_add/add_16/U143/ZN (OAI21_X1)                         0.05       1.18 r
+  y_add/add_16/U142/ZN (XNOR2_X1)                         0.07       1.25 r
+  y_add/add_16/SUM[8] (ADDER_N9_0_DW01_add_2)             0.00       1.25 r
+  y_add/sum[8] (ADDER_N9_0)                               0.00       1.25 r
+  y_reg/d[8] (REG_N11_2)                                  0.00       1.25 r
+  y_reg/U20/ZN (NAND2_X1)                                 0.03       1.28 f
+  y_reg/U7/ZN (NAND2_X1)                                  0.03       1.31 r
+  y_reg/q_reg[8]/D (DFFR_X1)                              0.01       1.32 r
+  data arrival time                                                  1.32
+
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                      -0.07      -0.07
+  y_reg/q_reg[8]/CK (DFFR_X1)                             0.00      -0.07 r
+  library setup time                                     -0.03      -0.10
+  data required time                                                -0.10
+  --------------------------------------------------------------------------
+  data required time                                                -0.10
+  data arrival time                                                 -1.32
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -1.42
+
+
+1
