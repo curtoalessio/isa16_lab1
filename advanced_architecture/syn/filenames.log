@@ -262,3 +262,10 @@
 /software/synopsys/syn_current_64.18/auxx/gui/dv/dv_path_cat_view.tcl
 /software/synopsys/syn_current_64.18/auxx/gui/common/table/table.tcl
 /software/synopsys/syn_current_64.18/auxx/gui/common/table/table_internal.tcl
+/software/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm_nowlm.db
+/software/synopsys/syn_current_64.18/libraries/syn/dw_foundation.sldb
+/software/synopsys/syn_current_64.18/libraries/syn/gtech.db
+/software/synopsys/syn_current_64.18/libraries/syn/standard.sldb
+/home/isa16/lab1/advanced_architecture/netlist/IIR_FILTER_ADV.v
+/home/isa16/lab1/advanced_architecture/netlist/IIR_FILTER_ADV.v
+/home/isa16/lab1/advanced_architecture/saif/IIR_FILTER_ADV_SYN.saif

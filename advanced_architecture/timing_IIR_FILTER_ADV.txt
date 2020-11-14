@@ -1,0 +1,98 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : IIR_FILTER_ADV
+Version: O-2018.06-SP4
+Date   : Sat Nov 14 14:20:56 2020
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: w_reg/q_reg[1]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: y_reg/q_reg[8]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  IIR_FILTER_ADV     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  w_reg/q_reg[1]/CK (DFFR_X1)                             0.00       0.00 r
+  w_reg/q_reg[1]/Q (DFFR_X1)                              0.10       0.10 r
+  w_reg/q[1] (REG_N11_1)                                  0.00       0.10 r
+  U2/Z (BUF_X1)                                           0.04       0.14 r
+  y_mult/fact1[1] (MULTIPLIER_N11_0)                      0.00       0.14 r
+  y_mult/mult_17/a[1] (MULTIPLIER_N11_0_DW_mult_tc_0)     0.00       0.14 r
+  y_mult/mult_17/U308/Z (BUF_X1)                          0.12       0.26 r
+  y_mult/mult_17/U501/Z (XOR2_X1)                         0.10       0.36 r
+  y_mult/mult_17/U307/ZN (INV_X1)                         0.06       0.42 f
+  y_mult/mult_17/U495/ZN (NAND2_X1)                       0.10       0.52 r
+  y_mult/mult_17/U367/ZN (OAI22_X1)                       0.06       0.58 f
+  y_mult/mult_17/U74/S (HA_X1)                            0.08       0.66 f
+  y_mult/mult_17/U492/ZN (AOI222_X1)                      0.11       0.77 r
+  y_mult/mult_17/U310/ZN (INV_X1)                         0.03       0.80 f
+  y_mult/mult_17/U491/ZN (AOI222_X1)                      0.09       0.89 r
+  y_mult/mult_17/U309/ZN (INV_X1)                         0.03       0.92 f
+  y_mult/mult_17/U490/ZN (AOI222_X1)                      0.09       1.01 r
+  y_mult/mult_17/U301/ZN (INV_X1)                         0.03       1.04 f
+  y_mult/mult_17/U489/ZN (AOI222_X1)                      0.09       1.13 r
+  y_mult/mult_17/U300/ZN (INV_X1)                         0.03       1.16 f
+  y_mult/mult_17/U488/ZN (AOI222_X1)                      0.09       1.25 r
+  y_mult/mult_17/U298/ZN (INV_X1)                         0.03       1.28 f
+  y_mult/mult_17/U487/ZN (AOI222_X1)                      0.09       1.37 r
+  y_mult/mult_17/U297/ZN (INV_X1)                         0.03       1.40 f
+  y_mult/mult_17/U486/ZN (AOI222_X1)                      0.09       1.49 r
+  y_mult/mult_17/U296/ZN (INV_X1)                         0.03       1.52 f
+  y_mult/mult_17/U485/ZN (AOI222_X1)                      0.09       1.61 r
+  y_mult/mult_17/U295/ZN (INV_X1)                         0.03       1.64 f
+  y_mult/mult_17/U484/ZN (AOI222_X1)                      0.09       1.73 r
+  y_mult/mult_17/U299/ZN (INV_X1)                         0.03       1.76 f
+  y_mult/mult_17/U12/CO (FA_X1)                           0.09       1.85 f
+  y_mult/mult_17/U11/CO (FA_X1)                           0.09       1.94 f
+  y_mult/mult_17/U10/CO (FA_X1)                           0.09       2.03 f
+  y_mult/mult_17/U9/CO (FA_X1)                            0.09       2.12 f
+  y_mult/mult_17/U8/CO (FA_X1)                            0.09       2.21 f
+  y_mult/mult_17/U7/CO (FA_X1)                            0.09       2.30 f
+  y_mult/mult_17/U6/CO (FA_X1)                            0.09       2.39 f
+  y_mult/mult_17/U5/CO (FA_X1)                            0.09       2.48 f
+  y_mult/mult_17/U337/Z (XOR2_X1)                         0.07       2.55 f
+  y_mult/mult_17/U336/Z (XOR2_X1)                         0.08       2.63 f
+  y_mult/mult_17/product[20] (MULTIPLIER_N11_0_DW_mult_tc_0)
+                                                          0.00       2.63 f
+  y_mult/fract_product[20] (MULTIPLIER_N11_0)             0.00       2.63 f
+  y_add/add1[8] (ADDER_N9_0)                              0.00       2.63 f
+  y_add/add_16/A[8] (ADDER_N9_0_DW01_add_0)               0.00       2.63 f
+  y_add/add_16/U1_8/S (FA_X1)                             0.15       2.78 r
+  y_add/add_16/SUM[8] (ADDER_N9_0_DW01_add_0)             0.00       2.78 r
+  y_add/sum[8] (ADDER_N9_0)                               0.00       2.78 r
+  y_reg/d[8] (REG_N11_2)                                  0.00       2.78 r
+  y_reg/U9/ZN (NAND2_X1)                                  0.03       2.81 f
+  y_reg/U8/ZN (OAI21_X1)                                  0.03       2.84 r
+  y_reg/q_reg[8]/D (DFFR_X1)                              0.01       2.85 r
+  data arrival time                                                  2.85
+
+  clock MY_CLK (rise edge)                                5.76       5.76
+  clock network delay (ideal)                             0.00       5.76
+  clock uncertainty                                      -0.07       5.69
+  y_reg/q_reg[8]/CK (DFFR_X1)                             0.00       5.69 r
+  library setup time                                     -0.03       5.66
+  data required time                                                 5.66
+  --------------------------------------------------------------------------
+  data required time                                                 5.66
+  data arrival time                                                 -2.85
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.81
+
+
+1

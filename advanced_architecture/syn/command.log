@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version O-2018.06-SP4 for linux64 -- Nov 27, 2018
-#@ # Date:   Sat Nov 14 13:26:23 2020
+#@ # Date:   Sat Nov 14 14:44:40 2020
 #@ # Run by: isa16@localhost.localdomain
 #@ 
 
@@ -42999,3 +42999,7 @@ gui_start
 #@ 
 #@ # -- End source /software/synopsys/syn_current_64.18/auxx/tcllib/lib/iwidgets4.1/watch.itk
 
+read_verilog -netlist ../netlist/IIR_FILTER_ADV.v
+read_saif -input ../saif/IIR_FILTER_ADV_SYN.saif -instance tb_iir_adv/UUT -unit ns -scale 1
+create_clock -name MY_CLK clk
+report_power > ../power_report_syn_IIR_FILTER_ADV.txt
