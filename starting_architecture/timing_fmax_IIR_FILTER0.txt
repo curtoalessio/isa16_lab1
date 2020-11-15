@@ -1,0 +1,114 @@
+Information: Updating design information... (UID-85)
+Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : IIR_FILTER
+Version: O-2018.06-SP4
+Date   : Sat Nov 14 23:25:22 2020
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: w_1_reg/q_reg[1]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: y_reg/q_reg[5]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  IIR_FILTER         5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  w_1_reg/q_reg[1]/CK (DFFR_X1)                           0.00       0.00 r
+  w_1_reg/q_reg[1]/QN (DFFR_X1)                           0.07       0.07 f
+  w_1_reg/U7/ZN (INV_X2)                                  0.06       0.12 r
+  w_1_reg/q[1] (REG_N9_2)                                 0.00       0.12 r
+  fb_mult0/fact1[1] (MULTIPLIER_N9_4)                     0.00       0.12 r
+  fb_mult0/mult_17/a[1] (MULTIPLIER_N9_4_DW_mult_tc_2)
+                                                          0.00       0.12 r
+  fb_mult0/mult_17/U545/Z (XOR2_X1)                       0.08       0.20 r
+  fb_mult0/mult_17/U518/ZN (OR2_X2)                       0.06       0.26 r
+  fb_mult0/mult_17/U620/ZN (OAI22_X1)                     0.05       0.31 f
+  fb_mult0/mult_17/U160/CO (FA_X1)                        0.09       0.40 f
+  fb_mult0/mult_17/U155/S (FA_X1)                         0.11       0.51 f
+  fb_mult0/mult_17/U154/S (FA_X1)                         0.14       0.64 r
+  fb_mult0/mult_17/U468/ZN (NOR2_X1)                      0.03       0.67 f
+  fb_mult0/mult_17/U395/ZN (NOR2_X1)                      0.06       0.73 r
+  fb_mult0/mult_17/U578/ZN (NAND2_X1)                     0.03       0.76 f
+  fb_mult0/mult_17/U685/ZN (OAI21_X1)                     0.05       0.81 r
+  fb_mult0/mult_17/U595/ZN (XNOR2_X1)                     0.06       0.87 r
+  fb_mult0/mult_17/product[13] (MULTIPLIER_N9_4_DW_mult_tc_2)
+                                                          0.00       0.87 r
+  fb_mult0/fract_product[13] (MULTIPLIER_N9_4)            0.00       0.87 r
+  fb_add/add1[2] (ADDER_N6_2)                             0.00       0.87 r
+  fb_add/add_16/A[2] (ADDER_N6_2_DW01_add_2)              0.00       0.87 r
+  fb_add/add_16/U71/ZN (NAND2_X1)                         0.04       0.91 f
+  fb_add/add_16/U73/ZN (OAI21_X1)                         0.05       0.96 r
+  fb_add/add_16/U51/ZN (AOI21_X1)                         0.03       0.99 f
+  fb_add/add_16/U78/ZN (OAI21_X1)                         0.05       1.04 r
+  fb_add/add_16/U41/ZN (XNOR2_X2)                         0.08       1.12 r
+  fb_add/add_16/SUM[5] (ADDER_N6_2_DW01_add_2)            0.00       1.12 r
+  fb_add/sum[5] (ADDER_N6_2)                              0.00       1.12 r
+  w_sub/sub[5] (SUBTRACTOR_N9)                            0.00       1.12 r
+  w_sub/sub_16/B[5] (SUBTRACTOR_N9_DW01_sub_2)            0.00       1.12 r
+  w_sub/sub_16/U138/ZN (INV_X1)                           0.03       1.16 f
+  w_sub/sub_16/U108/ZN (NAND2_X1)                         0.04       1.20 r
+  w_sub/sub_16/U113/ZN (OAI21_X1)                         0.03       1.23 f
+  w_sub/sub_16/U133/ZN (INV_X1)                           0.03       1.25 r
+  w_sub/sub_16/U149/ZN (OAI21_X1)                         0.04       1.29 f
+  w_sub/sub_16/U114/ZN (XNOR2_X2)                         0.08       1.36 f
+  w_sub/sub_16/DIFF[7] (SUBTRACTOR_N9_DW01_sub_2)         0.00       1.36 f
+  w_sub/diff[7] (SUBTRACTOR_N9)                           0.00       1.36 f
+  y_mult/fact1[7] (MULTIPLIER_N9_0)                       0.00       1.36 f
+  y_mult/mult_17/a[7] (MULTIPLIER_N9_0_DW_mult_tc_2)      0.00       1.36 f
+  y_mult/mult_17/U555/ZN (XNOR2_X1)                       0.06       1.43 f
+  y_mult/mult_17/U627/ZN (OAI22_X1)                       0.06       1.49 r
+  y_mult/mult_17/U140/S (FA_X1)                           0.12       1.61 f
+  y_mult/mult_17/U139/S (FA_X1)                           0.14       1.75 f
+  y_mult/mult_17/U497/ZN (NAND2_X1)                       0.05       1.80 r
+  y_mult/mult_17/U414/ZN (OAI21_X1)                       0.04       1.83 f
+  y_mult/mult_17/U608/ZN (AOI21_X1)                       0.04       1.88 r
+  y_mult/mult_17/U664/ZN (OAI21_X1)                       0.04       1.91 f
+  y_mult/mult_17/U593/ZN (XNOR2_X1)                       0.06       1.98 f
+  y_mult/mult_17/product[14] (MULTIPLIER_N9_0_DW_mult_tc_2)
+                                                          0.00       1.98 f
+  y_mult/fract_product[14] (MULTIPLIER_N9_0)              0.00       1.98 f
+  y_add/add1[3] (ADDER_N6_0)                              0.00       1.98 f
+  y_add/add_16/A[3] (ADDER_N6_0_DW01_add_2)               0.00       1.98 f
+  y_add/add_16/U56/ZN (NOR2_X1)                           0.04       2.02 r
+  y_add/add_16/U79/ZN (OAI21_X1)                          0.03       2.05 f
+  y_add/add_16/U73/ZN (AOI21_X1)                          0.06       2.11 r
+  y_add/add_16/U75/ZN (OAI21_X1)                          0.03       2.14 f
+  y_add/add_16/U76/ZN (XNOR2_X1)                          0.08       2.22 r
+  y_add/add_16/SUM[5] (ADDER_N6_0_DW01_add_2)             0.00       2.22 r
+  y_add/sum[5] (ADDER_N6_0)                               0.00       2.22 r
+  y_reg/d[5] (REG_N9_0)                                   0.00       2.22 r
+  y_reg/U16/ZN (NAND2_X1)                                 0.04       2.25 f
+  y_reg/U11/ZN (NAND2_X1)                                 0.03       2.28 r
+  y_reg/q_reg[5]/D (DFFR_X2)                              0.01       2.29 r
+  data arrival time                                                  2.29
+
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                      -0.07      -0.07
+  y_reg/q_reg[5]/CK (DFFR_X2)                             0.00      -0.07 r
+  library setup time                                     -0.03      -0.10
+  data required time                                                -0.10
+  --------------------------------------------------------------------------
+  data required time                                                -0.10
+  data arrival time                                                 -2.29
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -2.39
+
+
+1
