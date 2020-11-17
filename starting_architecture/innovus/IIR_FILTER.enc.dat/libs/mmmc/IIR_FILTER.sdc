@@ -1,1 +1,0 @@
-/home/isa16/lab1/starting_architecture/netlist/IIR_FILTER.sdc

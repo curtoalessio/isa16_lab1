@@ -25,7 +25,7 @@ begin
   B0 <= to_signed(211,11);
   B1 <= to_signed(423,11);
   B2 <= to_signed(211,11);
-  A1_NEG <=  to_signed(379,11); 		--coefficient -a1
+  A1_NEG <=  to_signed(378,11); 		--coefficient -a1
   A1_2_A2 <= to_signed(-61,11);		--coefficient a1^2 - a2
   A1A2 <= to_signed(-75,11);			--coefficient a1*a2
 

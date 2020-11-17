@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Sat Nov 14 16:11:30 2020                
+#  Created on Tue Nov 17 23:22:38 2020                
 #                                                     
 #######################################################
 
@@ -32,16 +32,16 @@ rcOut -setload IIR_FILTER_ADV.setload -rc_corner my_rc
 rcOut -setres IIR_FILTER_ADV.setres -rc_corner my_rc
 rcOut -spf IIR_FILTER_ADV.spf -rc_corner my_rc
 rcOut -spef IIR_FILTER_ADV.spef -rc_corner my_rc
-redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
-timeDesign -postRoute -pathReports -drvReports -slackReports -numPaths 50 -prefix IIR_FILTER_ADV_postRoute -outDir timingReports
-redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
-timeDesign -postRoute -hold -pathReports -slackReports -numPaths 50 -prefix IIR_FILTER_ADV_postRoute -outDir timingReports
-redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
-timeDesign -postRoute -pathReports -drvReports -slackReports -numPaths 50 -prefix IIR_FILTER_ADV_postRoute -outDir timingReports
-verifyConnectivity -type all -error 1000 -warning 50
-setVerifyGeometryMode -area { 0 0 0 0 } -minWidth true -minSpacing true -minArea true -sameNet true -short true -overlap true -offRGrid false -offMGrid true -mergedMGridCheck true -minHole true -implantCheck true -minimumCut true -minStep true -viaEnclosure true -antenna false -insuffMetalOverlap true -pinInBlkg false -diffCellViol true -sameCellViol false -padFillerCellsOverlap true -routingBlkgPinOverlap true -routingCellBlkgOverlap true -regRoutingOnly false -stackedViasOnRegNet false -wireExt true -useNonDefaultSpacing false -maxWidth true -maxNonPrefLength -1 -error 1000
-verifyGeometry
-setVerifyGeometryMode -area { 0 0 0 0 }
-all_hold_analysis_views 
-all_setup_analysis_views 
-write_sdf  -ideal_clock_network IIR_FILTER_ADV.sdf
+set_power_analysis_mode -reset
+set_power_analysis_mode -method static -corner max -create_binary_db true -write_static_currents true -honor_negative_energy true -ignore_control_signals true
+set_power_output_dir -reset
+set_power_output_dir ./
+set_default_switching_activity -reset
+set_default_switching_activity -input_activity 0.2 -period 10.0
+read_activity_file -reset
+read_activity_file -format VCD -scope tb_iir_adv/UUT -start {} -end {} -block {} ../vcd/IIR_FILTER_ADV_INN.vcd
+set_power -reset
+set_powerup_analysis -reset
+set_dynamic_power_simulation -reset
+report_power -rail_analysis_format VS -outfile .//IIR_FILTER_ADV.rpt
+report_power -outfile ../power_report_inn_IIR_FILTER_ADV.txt -sort { total }

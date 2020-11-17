@@ -1,0 +1,74 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : IIR_FILTER_ADV
+Version: O-2018.06-SP4
+Date   : Tue Nov 17 11:54:54 2020
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: w_1_reg/q_reg[5]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: y_mult_reg/q_reg[8]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  IIR_FILTER_ADV     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  w_1_reg/q_reg[5]/CK (DFFR_X1)                           0.00       0.00 r
+  w_1_reg/q_reg[5]/Q (DFFR_X1)                            0.09       0.09 f
+  w_1_reg/q[5] (REG_N11_1)                                0.00       0.09 f
+  y_mult/fact1[5] (MULTIPLIER_N11_0)                      0.00       0.09 f
+  y_mult/mult_17/a[5] (MULTIPLIER_N11_0_DW_mult_tc_1)     0.00       0.09 f
+  y_mult/mult_17/U430/ZN (INV_X1)                         0.04       0.13 r
+  y_mult/mult_17/U427/ZN (INV_X1)                         0.03       0.16 f
+  y_mult/mult_17/U425/Z (BUF_X2)                          0.04       0.20 f
+  y_mult/mult_17/U424/ZN (XNOR2_X1)                       0.06       0.26 f
+  y_mult/mult_17/U426/ZN (OR2_X2)                         0.06       0.32 f
+  y_mult/mult_17/U443/ZN (OAI22_X1)                       0.05       0.37 r
+  y_mult/mult_17/U170/S (FA_X1)                           0.12       0.49 f
+  y_mult/mult_17/U169/S (FA_X1)                           0.13       0.62 f
+  y_mult/mult_17/U168/S (FA_X1)                           0.14       0.76 r
+  y_mult/mult_17/U465/ZN (NOR2_X1)                        0.03       0.79 f
+  y_mult/mult_17/U452/ZN (OAI21_X1)                       0.05       0.84 r
+  y_mult/mult_17/U451/ZN (AOI21_X1)                       0.03       0.87 f
+  y_mult/mult_17/U464/ZN (OAI21_X1)                       0.04       0.91 r
+  y_mult/mult_17/U542/ZN (AOI21_X1)                       0.03       0.94 f
+  y_mult/mult_17/U528/ZN (OAI21_X1)                       0.05       0.98 r
+  y_mult/mult_17/U527/ZN (AOI21_X1)                       0.03       1.02 f
+  y_mult/mult_17/U526/ZN (XNOR2_X1)                       0.05       1.07 f
+  y_mult/mult_17/product[20] (MULTIPLIER_N11_0_DW_mult_tc_1)
+                                                          0.00       1.07 f
+  y_mult/fract_product[20] (MULTIPLIER_N11_0)             0.00       1.07 f
+  y_mult_reg/d[8] (REG_N9_0)                              0.00       1.07 f
+  y_mult_reg/U2/Z (MUX2_X1)                               0.07       1.14 f
+  y_mult_reg/q_reg[8]/D (DFFR_X1)                         0.01       1.15 f
+  data arrival time                                                  1.15
+
+  clock MY_CLK (rise edge)                                1.25       1.25
+  clock network delay (ideal)                             0.00       1.25
+  clock uncertainty                                      -0.07       1.18
+  y_mult_reg/q_reg[8]/CK (DFFR_X1)                        0.00       1.18 r
+  library setup time                                     -0.04       1.14
+  data required time                                                 1.14
+  --------------------------------------------------------------------------
+  data required time                                                 1.14
+  data arrival time                                                 -1.15
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.01
+
+
+1

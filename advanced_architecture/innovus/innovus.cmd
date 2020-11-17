@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Sat Nov 14 15:08:31 2020                
+#  Created on Tue Nov 17 22:37:32 2020                
 #                                                     
 #######################################################
 
@@ -29,7 +29,7 @@ set init_mmmc_file mmm_design.tcl
 init_design
 getIoFlowFlag
 setIoFlowFlag 0
-floorPlan -coreMarginsBy die -site FreePDK45_38x28_10R_NP_162NW_34O -r 1 0.6 5 5 5 5
+floorPlan -coreMarginsBy die -site FreePDK45_38x28_10R_NP_162NW_34O -r 1.0 0.6 5 5 5 5
 uiSetTool select
 getIoFlowFlag
 fit
@@ -57,14 +57,12 @@ fit
 clearGlobalNets
 globalNetConnect VDD -type pgpin -pin VDD -inst * -module {}
 globalNetConnect VSS -type pgpin -pin VSS -inst * -module {}
-clearGlobalNets
-globalNetConnect VDD -type pgpin -pin VDD -inst * -module {}
-globalNetConnect VSS -type pgpin -pin VSS -inst * -module {}
 setSrouteMode -viaConnectToShape { noshape }
 sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { metal1(1) metal10(10) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { metal1(1) metal10(10) } -nets { VDD VSS } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { metal1(1) metal10(10) }
 setPlaceMode -prerouteAsObs {1 2 3 4 5 6 7 8}
 setPlaceMode -fp false
 placeDesign
+gui_select -rect {123.103 40.212 116.028 50.008}
 setOptMode -fixCap true -fixTran true -fixFanoutLoad false
 optDesign -postCTS
 optDesign -postCTS -hold
@@ -84,19 +82,6 @@ setOptMode -fixCap true -fixTran true -fixFanoutLoad false
 optDesign -postRoute
 optDesign -postRoute -hold
 saveDesign IIR_FILTER_ADV.enc
-getDrawView
-setDrawView fplan
-win
-dumpToGIF IIR_FILTER_ADV/ss_.fplan.gif
-getDrawView
-setDrawView amoeba
-win
-dumpToGIF IIR_FILTER_ADV/ss_.amoeba.gif
-getDrawView
-setDrawView place
-win
-dumpToGIF IIR_FILTER_ADV/ss_.place.gif
-checkPlace checkplace.ss.rpt
 reset_parasitics
 extractRC
 rcOut -setload IIR_FILTER_ADV.setload -rc_corner my_rc
@@ -113,3 +98,6 @@ verifyGeometry
 setVerifyGeometryMode -area { 0 0 0 0 }
 reportGateCount -level 5 -limit 100 -outfile IIR_FILTER_ADV.gateCount
 saveNetlist IIR_FILTER_ADV.v
+all_hold_analysis_views 
+all_setup_analysis_views 
+write_sdf  -ideal_clock_network IIR_FILTER_ADV.sdf
