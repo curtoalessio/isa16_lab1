@@ -53,6 +53,6 @@
 # Loading timing data from ../innovus/IIR_FILTER.sdf
 # ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
 #    Time: 0 ns  Iteration: 0  Region: /tb_iir  File: ../tb/tb_iir.v
-vcd file ../vcd/IIR_FILTER_INN.vcd
-vcd add /tb_iir/UUT/*
+power add /tb_iir/UUT/*
 run 3 us
+power report -file ../switching_act_inn_netlist.txt
