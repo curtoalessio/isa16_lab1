@@ -18,14 +18,6 @@ end data_sink;
 
 architecture beh of data_sink is
 
-COMPONENT FLIP_FLOP IS
-							PORT 
-								( d:IN STD_LOGIC;
-								  clk,rst_n,en:IN STD_LOGIC;
-								  q:OUT STD_LOGIC
-								);
-END COMPONENT;
-
 begin
   process (CLK, RST_n)
   variable line_out : line;  
