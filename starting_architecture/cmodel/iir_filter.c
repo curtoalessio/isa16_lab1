@@ -45,7 +45,7 @@ int myfilter(int x)
   /// update the shift register
   for (i=N-1; i>0; i--)
     sw[i] = sw[i-1];
-    sw[0] = w;
+  sw[0] = w;
 
   return y;
 }
@@ -69,7 +69,7 @@ int main (int argc, char **argv)
   fp_in = fopen(argv[1], "r");
   if (fp_in == NULL)
   {
-    printf("Error: cannot open \n");
+    printf("Error: cannot open\n");
     exit(2);
   }
   fp_out = fopen(argv[2], "w");
