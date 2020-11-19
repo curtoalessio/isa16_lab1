@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Sun Nov 15 01:07:09 2020                
+#  Created on Wed Nov 18 23:30:49 2020                
 #                                                     
 #######################################################
 
@@ -29,7 +29,7 @@ set init_mmmc_file mmm_design.tcl
 init_design
 getIoFlowFlag
 setIoFlowFlag 0
-floorPlan -coreMarginsBy die -site FreePDK45_38x28_10R_NP_162NW_34O -r 1.0 0.6 5 5 5 5
+floorPlan -coreMarginsBy die -site FreePDK45_38x28_10R_NP_162NW_34O -r 1 0.6 5.0 5.0 5.0 5.0
 uiSetTool select
 getIoFlowFlag
 fit
@@ -61,6 +61,7 @@ sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeR
 setPlaceMode -prerouteAsObs {1 2 3 4 5 6 7 8}
 setPlaceMode -fp false
 placeDesign
+fit
 setOptMode -fixCap true -fixTran true -fixFanoutLoad false
 optDesign -postCTS
 optDesign -postCTS -hold
@@ -80,23 +81,6 @@ setOptMode -fixCap true -fixTran true -fixFanoutLoad false
 optDesign -postRoute
 optDesign -postRoute -hold
 saveDesign IIR_FILTER.enc
-selectInst FILLER_1069
-getDrawView
-setDrawView fplan
-win
-dumpToGIF /ss_.fplan.gif
-getDrawView
-win
-dumpToGIF ./ss_IIR_FILTER.fplan.gif
-getDrawView
-setDrawView amoeba
-win
-dumpToGIF ./ss_IIR_FILTER.amoeba.gif
-getDrawView
-setDrawView place
-win
-dumpToGIF ./ss_IIR_FILTER.place.gif
-checkPlace checkplace.ss.rpt
 reset_parasitics
 extractRC
 rcOut -setload IIR_FILTER.setload -rc_corner my_rc

@@ -2,14 +2,14 @@
 *	Innovus 17.11-s080_1 (64bit) 08/04/2017 11:13 (Linux 2.6.18-194.el5)
 *	
 *
-* 	Date & Time:	2020-Nov-17 23:26:25 (2020-Nov-17 22:26:25 GMT)
+* 	Date & Time:	2020-Nov-19 01:00:08 (2020-Nov-19 00:00:08 GMT)
 *
 *----------------------------------------------------------------------------------------
 *
 *	Design: IIR_FILTER_ADV
 *
 *	Liberty Libraries used: 
-*	        MyAnView: /home/isa16/lab1/advanced_architecture/innovus/IIR_FILTER_ADV.enc.dat/libs/mmmc/NangateOpenCellLibrary_typical_ecsm_nowlm.lib
+*	        MyAnView: /home/isa16/lab1/isa16_lab1/advanced_architecture/innovus/IIR_FILTER_ADV.enc.dat/libs/mmmc/NangateOpenCellLibrary_typical_ecsm_nowlm.lib
 *
 *	Power Domain used: 
 *		Rail:        VDD 	Voltage:        1.1 
@@ -20,7 +20,7 @@
 *
 *	Switching Activity File used: 
 *	        ../vcd/IIR_FILTER_ADV_INN.vcd
-*			Vcd Window used(Start Time, Stop Time):(1.71297e+25, 1.71297e+25) 
+*			Vcd Window used(Start Time, Stop Time):(-2.89135e-25, -2.89135e-25) 
 *                     Vcd Scale Factor: 1 
 **                    Design annotation coverage: 2749/2749 = 100% 
 *
