@@ -52,7 +52,7 @@ SIGNAL coeff_a1_neg,w,sw0,sw1,a1x1_ext:SIGNED(10 DOWNTO 0);
 SIGNAL y_ext,fb_ext:SIGNED(10 DOWNTO 0);
 SIGNAL ff0_approx,ff1_approx,fb0_approx,fb1_approx,fb0_1,fb1_1,ff0_1,ff1_1:SIGNED(8 DOWNTO 0);
 SIGNAL y_approx,y_tmp:SIGNED(8 DOWNTO 0);
-SIGNAL fb,fb_1,ff,ff_1,ax_approx,y_1,a1x1:SIGNED(8 downto 0);
+SIGNAL fb,ff,ff_1,ax_approx,y_1,a1x1:SIGNED(8 downto 0);
 SIGNAL ff0,ff1,fb0,fb1: SIGNED (20 DOWNTO 0);
 SIGNAL y,ax: SIGNED (20 DOWNTO 0);
 SIGNAL vout_tmp1,vout_tmp2,vout_tmp3,vout_tmp4:STD_LOGIC;
